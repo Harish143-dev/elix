@@ -19,7 +19,7 @@ const Navigation = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ease-in-out`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
           <a href="#" className="relative flex items-center">
             <div className="absolute -top-2 -bottom-2 -left-3 -right-3 bg-foreground/90 rounded-b-xl backdrop-blur-sm" />
