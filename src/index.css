@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Heaven's ELIX Brand Palette */
+    --background: 40 33% 97%;          /* Warm White #FDFAF5 */
+    --foreground: 0 0% 4%;              /* Midnight Black #0A0A0A */
+
+    --card: 0 0% 4%;                    /* Midnight Black for product cards */
+    --card-foreground: 37 33% 92%;      /* Cream #F4EFE6 */
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 37 33% 92%;
+
+    --primary: 42 49% 54%;              /* Harvest Gold #C8A84B */
+    --primary-foreground: 0 0% 4%;      /* Midnight Black */
+
+    --secondary: 0 0% 16%;             /* Charcoal #2A2A2A */
+    --secondary-foreground: 37 33% 92%;
+
+    --muted: 30 12% 81%;               /* Linen #D8D0C4 */
+    --muted-foreground: 0 0% 42%;      /* Stone Grey #6B6B6B */
+
+    --accent: 42 49% 54%;              /* Harvest Gold */
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 62% 33%;
+    --destructive-foreground: 37 33% 92%;
+
+    --border: 30 12% 81%;              /* Linen */
+    --input: 30 12% 81%;
+    --ring: 42 49% 54%;
+
+    --radius: 4px;
+
+    /* Flavour colours */
+    --flavour-hibiscus: 0 71% 32%;     /* #8B1A1A */
+    --flavour-hops: 149 54% 24%;       /* #1B5E36 */
+    --flavour-original: 0 0% 17%;      /* #2C2C2C */
+    --flavour-sulaimani: 36 89% 44%;   /* #D4860A */
+    --flavour-rose: 328 100% 38%;      /* #C2006E */
+    --flavour-lavender: 272 68% 33%;   /* #5B1A8C */
+
+    /* Brand specifics */
+    --midnight: 0 0% 4%;
+    --cream: 37 33% 92%;
+    --warm-white: 40 33% 97%;
+    --charcoal: 0 0% 16%;
+    --stone: 0 0% 42%;
+    --linen: 30 12% 81%;
+    --gold: 42 49% 54%;
+
+    /* Sidebar (unused but required) */
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 37 33% 92%;
+    --sidebar-primary: 42 49% 54%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 37 33% 92%;
+    --sidebar-border: 30 12% 81%;
+    --sidebar-ring: 42 49% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+}
+
+/* Utility classes for brand typography */
+@layer utilities {
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  .font-editorial {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-functional {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* Brand tracking presets */
+  .tracking-hero {
+    letter-spacing: 0.02em;
+  }
+  .tracking-section {
+    letter-spacing: 0.03em;
+  }
+  .tracking-label {
+    letter-spacing: 0.25em;
+  }
+  .tracking-tag {
+    letter-spacing: 0.2em;
+  }
+  .tracking-wide-brand {
+    letter-spacing: 0.35em;
+  }
+
+  /* Gold rule divider */
+  .gold-rule {
+    width: 40px;
+    height: 2px;
+    background-color: hsl(var(--gold));
+  }
+
+  /* Scrollbar styling */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
