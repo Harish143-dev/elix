@@ -17,13 +17,17 @@ const Navigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ease-in-out`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ease-in-out ${
+          scrolled
+            ? "bg-foreground border-b border-linen/20"
+            : "bg-transparent"
+        }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-18">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="relative flex items-center">
-            <div className="absolute -top-2 -bottom-2 -left-3 -right-3 bg-foreground/90 rounded-b-xl backdrop-blur-sm" />
-            <img src={logo} alt="Heaven's ELIX" className="relative z-10 h-14 md:h-20 w-auto object-fill" />
+            <div className="absolute -top-4 -bottom-2 -left-3 -right-3 bg-foreground/90 rounded-b-xl backdrop-blur-sm" />
+            <img src={logo} alt="Heaven's ELIX" className="relative z-10 h-14 md:h-18 w-auto object-fill" />
           </a>
 
           {/* Desktop links */}
